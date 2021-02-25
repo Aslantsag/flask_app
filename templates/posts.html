@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Запись
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center mb-5">Запись</h1>
+<div class="block mb-3">
+    {% for post in posts %}
+    <div class="user-post alert alert-info clearfix" role="alert">
+        <div class="float-left">
+            <div class="h4 mb-0">{{ post.u_name }}</div>
+            <div class="post-time">
+                Время записи:
+                <time>{{ post.date.time()|truncate(1) }}</time>
+            </div>
+        </div>
+        <a href="/post/delete/{{ post.id }}" class="float-right btn btn-danger">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

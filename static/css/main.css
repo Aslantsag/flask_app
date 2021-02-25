@@ -1,0 +1,34 @@
+body {
+    counter-reset: list;
+}
+.alert.user-post {
+    background-color: #f0fdff;
+    /*height: 78px;*/
+}
+.post-uname {
+    color: #111;
+}
+.post-uname:before {
+    counter-increment: list;
+    content: counter(list) ". ";
+}
+.post-time {
+    font-size: 14px;
+}
+.form-control {
+    margin-bottom: 20px;
+}
+.post-time__time,
+.post-time__span {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.post-time__time {
+    width: 35px;
+    overflow: hidden;
+}
+@media (max-width: 600px) {
+    .authbox.w-50 {
+        width: 95% !important;
+    }
+}
