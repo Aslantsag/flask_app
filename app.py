@@ -19,8 +19,8 @@ def index():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
 
-    LOGIN = 'BarberAdmin'
-    PASSWORD = 'UpasWs143'
+    LOGIN = 'LOGIN'
+    PASSWORD = 'PASSWORD'
 
     if request.method == 'POST':
         login = request.form['login']
